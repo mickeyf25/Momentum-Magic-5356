@@ -1,0 +1,79 @@
+.app-container {
+  min-height: 100vh;
+  background-color: #f3f4f6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.message {
+  font-size: 1.1rem;
+  color: #374151;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background: #475569;
+}
+
+.dark ::-webkit-scrollbar-thumb:hover {
+  background: #64748b;
+}
+
+/* Animations */
+.task-card {
+  transition: all 0.2s ease-in-out;
+}
+
+.task-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.dark .task-card:hover {
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* Help Hub z-index override */
+[data-quest-help-hub] {
+  z-index: 9999 !important;
+}
+
+.quest-help-hub {
+  z-index: 9999 !important;
+}
+
+/* Ensure help hub appears above sidebar and header */
+.quest-help-hub-container {
+  z-index: 9999 !important;
+  position: fixed !important;
+}
+
+/* Sidebar layout fixes */
+.sidebar-nav {
+  max-height: calc(100vh - 200px);
+  overflow-y: auto;
+}
+
+/* Ensure sidebar takes full height */
+aside {
+  height: 100vh !important;
+  max-height: 100vh !important;
+}
